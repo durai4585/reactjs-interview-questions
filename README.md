@@ -50,7 +50,7 @@
 |41 | [What is reconciliation?](#what-is-reconciliation) |
 |42 | [How to set state with a dynamic key name?](#how-to-set-state-with-a-dynamic-key-name) |
 |43 | [What would be the common mistake of function being called every time the component renders?](#what-would-be-the-common-mistake-of-function-being-called-every-time-the-component-renders) |
-|44 | [Why is it necessary to capitalize component names?](#why-is-it-necessary-to-capitalize-component-names) |
+|44 | [Is lazy function supports named exports??](#is-lazy-function-supports-named-exports) |
 |45 | [Why React uses className over class attribute?](#why-react-uses-classname-over-class-attribute) |
 |46 | [What are fragments?](#what-are-fragments) |
 |47 | [Why fragments are better than container divs?](#why-fragments-are-better-than-container-divs) |
@@ -101,7 +101,7 @@
 |92 | [How to loop inside JSX?](#how-to-loop-inside-jsx) |
 |93 | [How do you access props in attribute quotes?](#how-do-you-access-props-in-attribute-quotes) |
 |94 | [What is React PropType array with shape?](#what-is-react-proptype-array-with-shape) |
-|95 | [How conditionally apply class attributes?](#how-conditionally-apply-class-attributes) |
+|95 | [How to conditionally apply class attributes?](#how-to-conditionally-apply-class-attributes) |
 |96 | [What is the difference between React and ReactDOM?](#what-is-the-difference-between-react-and-reactdom) |
 |97 | [Why ReactDOM is separated from React?](#why-reactdom-is-separated-from-react) |
 |98 | [How to use React label element?](#how-to-use-react-label-element) |
@@ -246,7 +246,7 @@
 |230| [What are the benefits of React Router V4?](#what-are-the-benefits-of-react-router-v4)|
 |231| [Can you describe about componentDidCatch lifecycle method signature?](#can-you-describe-about-componentdidcatch-lifecycle-method-signature)|
 |232| [In which scenarios error boundaries do not catch errors?](#in-which-scenarios-error-boundaries-do-not-catch-errors)|
-|233| [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event0-handlers)|
+|233| [Why do not you need error boundaries for event handlers?](#why-do-not-you-need-error-boundaries-for-event-handlers)|
 |234| [What is the difference between try cath block and error boundaries?](#what-is-the-difference-between-try-catch-block-and-error-boundaries)|
 |235| [What is the behavior of uncaught errors in react 16?](#what-is-the-behavior-of-uncaught-errors-in-react-16)|
 |236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
@@ -262,7 +262,7 @@
 |246| [What are the methods invoked during error handling?](#what-are-the-methods-invoked-during-error-handling)|
 |247| [What is the purpose of displayName class property?](#what-is-the-purpose-of-displayname-class-property)|
 |248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
-|249| [What is the purpose of unmountComponentAtNode method?](#what-is-the-purpose-of-unmountcomponentatNode-method)|
+|249| [What is the purpose of unmountComponentAtNode method?](#what-is-the-purpose-of-unmountcomponentatnode-method)|
 |250| [What is code-splitting?](#what-is-code-splitting)|
 |251| [What is the benefit of strict mode?](#what-is-the-benefit-of-strict-mode)|
 |252| [What are Keyed Fragments?](#what-are-keyed-fragments)|
@@ -280,7 +280,7 @@
 |264| [How do you say that state updates are merged?](#how-do-you-say-that-state-updates-are-merged)|
 |265| [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)|
 |266| [How to prevent component from rendering?](#how-to-prevent-component-from-rendering)|
-|267| [What are the conditions to safely use the index as a key?](#What-are-the-conditions-to-safely-use-the-index-as-a-key)|
+|267| [What are the conditions to safely use the index as a key?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)|
 |268| [Is it keys should be globally unique?](#is-it-keys-should-be-globally-unique)|
 |269| [What is the popular choice for form handling?](#what-is-the-popular-choice-for-form-handling)|
 |270| [What are the advantages of formik over redux form library?](#what-are-the-advantages-of-formik-over-redux-form-library)|
@@ -312,16 +312,29 @@
 |296| [How do you set default value for uncontrolled component?](#how-do-you-set-default-value-for-uncontrolled-component)|
 |297| [What is your favorite React stack?](#what-is-your-favorite-react-stack)|
 |298| [What is the difference between Real DOM and Virtual DOM?](#what-is-the-difference-between-real-dom-and-virtual-dom)|
-|299| [How to add a bootstrap for a react application?](#how-to-add-a-bootstrap-for-a-react-application)|
+|299| [How to add Bootstrap to a react application?](#how-to-add-bootstrap-to-react-application)|
 |300| [Can you list down top websites or applications using react as front end framework?](#can-you-list-down-top-websites-or-applications-using-react-as-front-end-framework)|
 |301| [Is it recommended to use CSS In JS technique in React?](#is-it-recommended-to-use-css-in-js-technique-in-react)|
 |302| [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)|
 |303| [How to fetch data with React Hooks?](#how-to-fetch-data-with-react-hooks)|
 |304| [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)|
 |305| [What is the stable release for hooks support?](#what-is-the-stable-release-for-hooks-support)|
-|306| [Why do we use square brackets in useState?](#why-do-we-use-square-brackets-in-usestate?)|
+|306| [Why do we use square brackets in useState?](#why-do-we-use-square-brackets-in-usestate)|
 |307| [What are the sources used for introducing hooks?](#what-are-the-sources-used-for-introducing-hooks)|
 |308| [How do you access imperative API of web components?](#how-do-you-access-imperative-api-of-web-components)|
+|309| [What is formik?](#what-is-formik)|
+|310| [What are typical middleware choices for handling asynchronous calls in Redux?](#what-are-typical-middleware-choices-for-handling-asynchronous-calls-in-redux)|
+|311| [Is browsers understand JSX code?](#is-browsers-understand-jsx-code)|
+|312| [Describe about data flow in react?](#describe-about-data-flow-in-react)|
+|313| [What is react scripts?](#what-is-react-scripts)|
+|314| [What are the features of create react app?](#what-are-the-features-of-create-react-app)|
+|315| [What is the purpose of renderToNodeStream method?](#what-is-the-purpose-of-rendertonodestream-method)|
+|316| [What is MobX?](#what-is-mobx)|
+|317| [What are the differences between Redux and MobX?](#what-are-the-differences-between-redux-and-mobx)|
+|318| [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)|
+|319| [What is Concurrent Rendering?](#what-is-concurrent-rendering)|
+|320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
+|321| [Can I use javascript urls in react16.9?](#can-i-use-javascript-urls-in-react16.9)|
 
 ## Core React
 
@@ -335,7 +348,7 @@
 
     * It uses **VirtualDOM** instead RealDOM considering that RealDOM manipulations are expensive.
     * Supports **server-side rendering**.
-    * Follows *Unidirectional** data flow or data binding.
+    * Follows **Unidirectional** data flow or data binding.
     * Uses **reusable/composable** UI components to develop the view.
 
 3. ### What is JSX?
@@ -392,7 +405,7 @@
 
     ```javascript
     const Button = ({ onLogin }) =>
-      <div id={'login-btn'} onClick={onLogin} />
+      <div id={'login-btn'} onClick={onLogin}>Login</div>
     ```
 
     Then JSX gets transpiled to a `React.createElement()` function tree:
@@ -430,6 +443,7 @@
 6. ### When to use a Class Component over a Function Component?
 
     If the component needs *state or lifecycle methods* then use class component otherwise use function component.
+    *However, from React 16.8 with the addition of Hooks, you could use state , lifecycle  methods and other features that were only available in class component right in your function component.*
 
 7. ### What are Pure Components?
 
@@ -748,12 +762,16 @@
 
     ```javascript
     class MyComponent extends Component {
+      constructor(props){
+        super(props);
+        this.node = createRef();
+      }
       componentDidMount() {
-        this.node.scrollIntoView()
+        this.node.current.scrollIntoView();
       }
 
       render() {
-        return <div ref={node => this.node = node} />
+        return <div ref={this.node} />
       }
     }
     ```
@@ -1077,10 +1095,24 @@
     }
     ```
 
-44. ### Why is it necessary to capitalize component names?
-
-    It is necessary because components are not DOM elements, they are constructors. Also, in JSX lowercase tag names are referring to HTML elements, not components.
-
+44. ### Is lazy function supports named exports?
+    No, currently `React.lazy` function supports default exports only. If you would like to import modules which are named exports, you can create an intermediate module that reexports it as the default. It also ensures that tree shaking keeps working and don’t pull unused components.
+    Let's take a component file which exports multiple named components,
+    ```javascript
+    // MoreComponents.js
+    export const SomeComponent = /* ... */;
+    export const UnusedComponent = /* ... */;
+    ```
+    and reexport `MoreComponents.js` components in an intermediate file `IntermediateComponent.js`
+    ```javascript
+    // IntermediateComponent.js
+    export { SomeComponent as default } from "./MoreComponents.js";
+    ```
+    Now you can import the module using lazy function as below,
+    ```javascript
+    import React, { lazy } from 'react';
+    const SomeComponent = lazy(() => import("./IntermediateComponent.js"));
+    ```
 45. ### Why React uses `className` over `class` attribute?
 
     `class` is a keyword in JavaScript, and JSX is an extension of JavaScript. That's the principal reason why React uses `className` instead of `class`. Pass a string as the `className` prop.
@@ -1768,7 +1800,7 @@
 
 86. ### What are the Pointer Events supported in React?
 
-    *Pointer Events* provide a unified way of handling all input events. In the olden days we have a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the *Pointer Events* specification.
+    *Pointer Events* provide a unified way of handling all input events. In the old days we had a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the *Pointer Events* specification.
 
     The following event types are now available in *React DOM*:
 
@@ -1786,7 +1818,11 @@
 87. ### Why should component names start with capital letter?
 
     If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.
-
+    ```jsx harmony
+    class SomeComponent extends Component {
+     // Code goes here
+    }
+    ```
     You can define component class which name starts with lowercase letter, but when it's imported it should have capital letter. Here lowercase is fine:
 
     ```jsx harmony
@@ -1947,7 +1983,7 @@
     }
     ```
 
-95. ### How conditionally apply class attributes?
+95. ### How to conditionally apply class attributes?
 
     You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
 
@@ -2011,6 +2047,11 @@
 
      ```javascript
      class WindowDimensions extends React.Component {
+       constructor(props){
+         super(props);
+         this.updateDimensions = this.updateDimensions.bind(this);
+       }
+        
        componentWillMount() {
          this.updateDimensions()
        }
@@ -2024,7 +2065,7 @@
        }
 
        updateDimensions() {
-         this.setState({width: $(window).width(), height: $(window).height()})
+         this.setState({width: window.innerWidth, height: window.innerHeight})
        }
 
        render() {
@@ -2314,14 +2355,17 @@
 
      With the export specifier, the MyProfile is going to be the member and exported to this module and the same can be imported without mentioning the name in other components.
 
-118. ### Why React component names must begin with a capital letter?
+118. ### What are the exceptions on React component naming?
 
-     In JSX, lowercase tag names are considered to be HTML tags. However, capitalized and lowercase tag names with a dot (property accessors) aren't.
-
-     1. `<component />` compiles to `React.createElement('component')` (i.e, HTML tag)
-     2. `<obj.component />` compiles to `React.createElement(obj.component)`
-     3. `<Component />` compiles to `React.createElement(Component)`
-
+     The component names should start with a uppercase letter but there are few exceptions on this convention. The lowercase tag names with a dot (property accessors) are still considered as valid component names.
+     For example the below tag can be compiled to a valid component,
+     ```javascript
+     render(){
+        return (
+            <obj.component /> // `React.createElement(obj.component)`
+           )
+     }
+     ```
 119. ### Why is a component constructor called only once?
 
      React's *reconciliation* algorithm assumes that without any information to the contrary, if a custom component appears in the same place on subsequent renders, it's the same component as before, so reuses the previous instance rather than creating a new one.
@@ -2987,6 +3031,16 @@
        }
      }
      ```
+     
+     Recommend always using the “object shorthand” form for the `mapDispatchToProps`
+        
+     Redux wrap it in another function that looks like (…args) => dispatch(onTodoClick(…args)), and pass that wrapper function as a prop to your component.
+      
+      ```javascript
+       const mapDispatchToProps = ({
+         onTodoClick
+       })
+      ```
 
 157. ### Can I dispatch an action in reducer?
 
@@ -2994,7 +3048,7 @@
 
 158. ### How to access Redux store outside a component?
 
-     Yes. You just need to export the store from the module where it created with `createStore()`. Also, it shouldn't pollute the global window object.
+     You just need to export the store from the module where it created with `createStore()`. Also, it shouldn't pollute the global window object.
 
      ```javascript
      store = createStore(myReducer)
@@ -3004,7 +3058,7 @@
 
 159. ### What are the drawbacks of MVW pattern?
 
-     1. The DOM manipulation is very expensive which causes applications behaves slowly and inefficient.
+     1. DOM manipulation is very expensive which causes applications to behave slow and inefficient.
      3. Due to circular dependencies, a complicated model was created around models and views.
      3. Lot of data changes happens for collaborative applications(like Google Docs).
      4. No way to do undo (travel back in time) easily without adding so much extra code.
@@ -3634,8 +3688,15 @@
      Relay is a JavaScript framework for providing a data layer and client-server communication to web applications using the React view layer.
 
 205. ### How to use TypeScript in `create-react-app` application?
+     Starting from react-scripts@2.1.0 or higher, there is a built-in support for typescript. You can just pass `--typescript` option as below
+     ```bash
+     npx create-react-app my-app --typescript
 
-     When you create a new project supply `--scripts-version` option as `react-scripts-ts`. `react-scripts-ts` is a set of adjustments to take the standard `create-react-app` project pipeline and bring TypeScript into the mix.
+     # or
+
+     yarn create react-app my-app --typescript
+     ```
+     But for lower versions of react scripts, just supply `--scripts-version` option as `react-scripts-ts` while you create a new project. `react-scripts-ts` is a set of adjustments to take the standard `create-react-app` project pipeline and bring TypeScript into the mix.
 
      Now the project layout should look like the following:
 
@@ -3731,7 +3792,7 @@
      })
      ```
 
-     But you can write statics inside ES6+ classes like this:
+     But you can write statics inside ES6+ classes or writing them outside class as below,
 
      ```javascript
      class Component extends React.Component {
@@ -3743,6 +3804,14 @@
          // ...
        }
      }
+     ```
+     ```javascript
+     class Component extends React.Component {
+        ....
+     }
+
+     Component.propTypes = {...}
+     Component.someMethod = function(){....}
      ```
 
 210. ### Can Redux only be used with React?
@@ -3889,7 +3958,7 @@
         React.render(<User age={30} department={"IT"} />, document.getElementById('container'));
      ```
 219. ### Do I need to keep all my state into Redux? Should I ever use react internal state?
-     It is up to developer decision. i.e, It is developer job to determine what kinds of state make up your application, and where each piece of state should liveSome users prefer to keep every single piece of data in Redux, to maintain a fully serializable and controlled version of their application at all times. Others prefer to keep non-critical or UI state, such as “is this dropdown currently open”, inside a component's internal state.
+     It is up to developer decision. i.e, It is developer job to determine what kinds of state make up your application, and where each piece of state should live. Some users prefer to keep every single piece of data in Redux, to maintain a fully serializable and controlled version of their application at all times. Others prefer to keep non-critical or UI state, such as “is this dropdown currently open”, inside a component's internal state.
 
      Below are the thumb rules to determine what kind of data should be put into Redux
      1. Do other parts of the application care about this data?
@@ -4013,7 +4082,7 @@
      }
      ```
 226. ### What are hooks?
-     Hooks are a new feature proposal that lets you use state and other React features without writing a class. Let's see an example of useState hook example,
+     Hooks is a new feature that lets you use state and other React features without writing a class. Let's see an example of useState hook example,
      ```jsx
      import { useState } from 'react';
 
@@ -4158,8 +4227,8 @@
 240. ### What is the main purpose of constructor?
      The constructor is mainly used for two purposes,
      1. To initialize local state by assigning object to this.state
-     2. For binding event handler methods to the instatnce
-     For example, the below code covers both the above casess,
+     2. For binding event handler methods to the instance
+     For example, the below code covers both the above cases,
      ```javascript
      constructor(props) {
        super(props);
@@ -4884,11 +4953,11 @@
      1. Two elements of different types will produce different trees.
      2. The developer can hint at which child elements may be stable across different renders with a key prop.
 288. ### What are the rules covered by diffing algorithm?
-     When diffing two trees, React first compares the two root elements. The behavior is different depending on the types of the root elements. It covers the below rules during reconsilation algorithm,
+     When diffing two trees, React first compares the two root elements. The behavior is different depending on the types of the root elements. It covers the below rules during reconciliation algorithm,
      1. **Elements Of Different Types:**
         Whenever the root elements have different types, React will tear down the old tree and build the new tree from scratch. For example,  elements <a> to <img>, or from <Article> to <Comment> of different types lead a full rebuild.
      2. **DOM Elements Of The Same Type:**
-        When comparing two React DOM elements of the same type, React looks at the attributes of both, keeps the same underlying DOM node, and only updates the changed attributes. Lets take an example with same DOM eleemnts except className attribute,
+        When comparing two React DOM elements of the same type, React looks at the attributes of both, keeps the same underlying DOM node, and only updates the changed attributes. Lets take an example with same DOM elements except className attribute,
         ```javascript
         <div className="show" title="ReactJS" />
 
@@ -5013,7 +5082,7 @@
      | It causes too much of memory wastage | 	There is no memory wastage|
      | Creates a new DOM if element updates | It updates the JSX if element update|
 
-299. ### How to add a bootstrap for a react application?
+299. ### How to add Bootstrap to a react application?
      Bootstrap can be added to your React app in a three possible ways
      1. Using the Bootstrap CDN:
         This is the easiest way to add bootstrap. Add both bootstrap CSS and JS resources in a head tag.
@@ -5099,3 +5168,98 @@
      5. Reducer components in ReasonReact.
 308. ### How do you access imperative API of web components?
      Web Components often expose an imperative API to implement its functions. You will need to use a **ref** to interact with the DOM node directly if you want to access imperative API of a web component. But if you are using third-party Web Components, the best solution is to write a React component that behaves as a **wrapper** for your Web Component.
+309. ### What is formik?
+     Formik is a small react form library that helps you with the three major problems,
+     1. Getting values in and out of form state
+     2. Validation and error messages
+     3. Handling form submission
+
+310. ### What are typical middleware choices for handling asynchronous calls in Redux?
+     Some of the popular middleware choices for handling asynchronous calls in Redux eco system are `Redux Thunk, Redux Promise, Redux Saga`.
+311. ### Is browsers understand JSX code?
+     No, browsers can't understand JSX code. You need a transpiler to convert your JSX to regular Javascript that browsers can understand. The most widely used transpiler right now is Babel.
+312. ### Describe about data flow in react?
+     React implements one-way reactive data flow using props which reduce boilerplate and is easier to understand than traditional two-way data binding.
+313. ### What is react scripts?
+     The `react-scripts` package is a set of scripts from the create-react-app starter pack which helps you kick off projects without configuring. The `react-scripts start` command sets up the development environment and starts a server, as well as hot module reloading.
+314. ### What are the features of create react app?
+     Below are the list of some of the features provided by create react app.
+     1. React, JSX, ES6, Typescript and Flow syntax support.
+     2. Autoprefixed CSS
+     3. A live development server
+     4. A fast interactive unit test runner with built-in support for coverage reporting
+     5. A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps
+     6. An offline-first service worker and a web app manifest, meeting all the Progressive Web App criteria.
+
+315. ### What is the purpose of renderToNodeStream method?
+     The `ReactDOMServer#renderToNodeStream` method is used to generate HTML on the server and send the markup down on the initial request for faster page loads. It also helps search engines to crawl your pages easily for SEO purposes.
+     **Note:** Remember this method is not available in the browser but only server.
+316. ### What is MobX?
+     MobX is a simple, scalable and battle tested state management solution for applying functional reactive programming (TFRP). For reactJs application, you need to install below packages,
+     ```bash
+     npm install mobx --save
+     npm install mobx-react --save
+     ```
+317. ### What are the differences between Redux and MobX?
+     Below are the main differences between Redux and MobX,
+
+     | Topic | Redux | MobX |
+     | ----- | ------- | ------- 
+     | Definition| It is a javascript library for managing the application state | It is a library for reactively managing the state of your applications |
+     | Programming | It is mainly written in ES6 | It is written in JavaScript(ES5) |
+     | Data Store | There is only one large store exist for data storage | There is more than one store for storage |
+     | Usage | Mainly used for large and complex applications | Used for simple applications |
+     | Performance | Need to be improved | Provides better performance |
+     | How it stores | Uses JS Object to store | Uses observable to store the data |
+
+318. ### Should I learn ES6 before learning ReactJS?
+     No, you don’t have to learn es2015/es6 to learn react. But you may find many resources or React ecosystem uses ES6 extensively. Let's see some of the frequently used ES6 features,
+     1. Destructuring: To get props and use them in a component
+     ```javascript
+     // in es 5
+      var someData = this.props.someData
+      var dispatch = this.props.dispatch
+
+     // in es6
+     const { someData, dispatch } = this.props
+     ```
+     2. Spread operator: Helps in passing props down into a component
+     ```javascript
+     // in es 5
+     <SomeComponent someData={this.props.someData} dispatch={this.props.dispatch} />
+
+     // in es6
+     <SomeComponent {...this.props} />
+     ```
+     3. Arrow functions: Makes compact syntax
+     ```javascript
+     // es 5
+     var users = usersList.map(function (user) {
+      return <li>{user.name}</li>
+     })
+     // es 6
+     const users = usersList.map(user => <li>{user.name}</li>);
+     ```
+319. ### What is Concurrent Rendering?
+     The Concurrent rendering makes React apps to be more responsive by rendering component trees without blocking the main UI thread. It allows React to interrupt a long-running render to handle a high-priority event. i.e, When you enabled concurrent Mode, React will keep an eye on other tasks that need to be done, and if there's something with a higher priority it will pause what it is currently rendering and let the other task finish first. You can enable this in two ways,
+     ```javascript
+     // 1. Part of an app by wrapping with ConcurrentMode
+     <React.unstable_ConcurrentMode>
+       <Something />
+     </React.unstable_ConcurrentMode>
+
+     // 2. Whole app using createRoot
+     ReactDOM.unstable_createRoot(domNode).render(<App />);
+     ```
+320. ### What is the difference between async mode and concurrent mode?
+     Both refers the same thing. Previously concurrent Mode being referred to as "Async Mode" by React team. The name has been changed to highlight React’s ability to perform work on different priority levels. So it avoids the confusion from other approaches to Async Rendering.
+321. ### Can I use javascript urls in react16.9?
+     Yes, you can use javascript: URLs but it will log a warning in the console. Because URLs starting with javascript: are dangerous by including unsanitized output in a tag like <a href> and create a security hole.
+     ```javascript
+     const companyProfile = {
+       website: "javascript: alert('Your website is hacked')",
+     };
+     // It will log a warning
+     <a href={companyProfile.website}>More details</a>
+     ```
+     Remember that the future versions will throw an error for javascript URLs.
